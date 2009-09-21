@@ -21,7 +21,7 @@ class YouTube
       <object width="#{width}" height="#{height}">
         <param name="movie" value="#{@embed_url}" />
         <param name="allowFullScreen" value="true" />
-        <embed src="#{@embed_url}" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344" />
+        <embed src="#{@embed_url}" type="application/x-shockwave-flash" allowfullscreen="true" width="#{width}" height="#{height}" />
       </object>
     END
   end
