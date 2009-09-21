@@ -2,7 +2,7 @@ module Mdarby
   module Acts #:nodoc:
     module Acts_as_video_fu_helper
   
-      def display_video(obj)
+      def display_video(obj, width = 425)
         video_klass(obj).embed_html
       end
       
