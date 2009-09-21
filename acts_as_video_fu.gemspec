@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
                 "MIT-LICENSE",
                 "rails/init.rb",
                 "Rakefile",
-                "README",
+                "README.textile",
                 "tasks/acts_as_video_fu_tasks.rake",
                 "test/acts_as_video_fu_test.rb",
                 "uninstall.rb"]
