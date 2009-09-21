@@ -3,7 +3,7 @@ module Mdarby
     module Acts_as_video_fu_helper
   
       def display_video(obj, width = 425)
-        video_klass(obj).embed_html
+        video_klass(obj).embed_html(width)
       end
       
       def thumbnail_url(obj)

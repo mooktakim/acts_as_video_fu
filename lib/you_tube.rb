@@ -15,7 +15,7 @@ class YouTube
   end
   
   def embed_html(width = 425)
-    width = 524 if width.to_i < 1
+    width = 425 if width.to_i < 1
     height = (width.to_i * 0.809411764705882).to_i
     <<-END
       <object width="#{width}" height="#{height}">
