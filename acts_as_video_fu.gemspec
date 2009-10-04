@@ -1,13 +1,14 @@
 Gem::Specification.new do |s|
   s.name     = "acts_as_video_fu"
-  s.version  = "1.3.7"
-  s.date     = "2009-03-15"
+  s.version  = "1.3.8"
+  s.date     = "2009-10-04"
   s.summary  = "Rails plugin that easily allows you to show video streams on your site."
   s.email    = "mooktakim@fluxter.co.uk"
   s.homepage = "http://github.com/mooktakim/acts_as_video_fu/tree/master"
   s.description = "Rails plugin that easily allows you to show video streams on your site."
   s.has_rdoc = false
-  s.authors  = ["Matt Darby"]
+  s.authors  = ["Mooktakim Ahmed", "Matt Darby"]
+  s.require_paths = ["lib"]
   s.files    = ["init.rb",
                 "install.rb",
                 "lib/acts_as_video_fu.rb",
