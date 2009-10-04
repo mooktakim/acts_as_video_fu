@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "acts_as_video_fu"
-  s.version  = "1.3.9"
+  s.version  = "1.3.10"
   s.date     = "2009-10-04"
   s.summary  = "Rails plugin that easily allows you to show video streams on your site."
   s.email    = "mooktakim@fluxter.co.uk"

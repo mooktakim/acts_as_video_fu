@@ -24,9 +24,10 @@ class YouTube
     width = 425 if width.to_i < 1
     height = (width.to_f * screen_ratio).to_i
     <<-END
-      <object width="#{width}" height="#{height}">
+      <object width="#{width}" height="#{height}" style="z-index: 0; position: relative;">
         <param name="movie" value="#{@embed_url}" />
         <param name="allowFullScreen" value="true" />
+        <param name="wmode" value="transparent" />
         <embed src="#{@embed_url}" type="application/x-shockwave-flash" allowfullscreen="true" width="#{width}" height="#{height}" />
       </object>
     END
