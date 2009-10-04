@@ -5,9 +5,15 @@ class YouTube
   default_params :output => 'xml'
   
   def initialize(obj)
-    @clip_id   = obj.video_url.split('?v=').last
+    @clip_id   = obj.video_url.split('?v=').last.split('&').first
     @embed_url = "http://www.youtube.com/v/#{@clip_id}&hl=en&fs=1"
     @response  = self.class.get("/feeds/api/videos/#{@clip_id}")
+  end
+  
+  def screen_ratio
+    height = @response["entry"]["media:group"]["media:thumbnail"][0]["height"].to_f
+    width = @response["entry"]["media:group"]["media:thumbnail"][0]["width"].to_f
+    height / width
   end
   
   def thumbnail_url
@@ -16,7 +22,7 @@ class YouTube
   
   def embed_html(width = 425)
     width = 425 if width.to_i < 1
-    height = (width.to_i * 0.809411764705882).to_i
+    height = (width.to_f * screen_ratio).to_i
     <<-END
       <object width="#{width}" height="#{height}">
         <param name="movie" value="#{@embed_url}" />
