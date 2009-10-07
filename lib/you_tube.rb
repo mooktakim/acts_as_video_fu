@@ -17,7 +17,8 @@ class YouTube
   end
   
   def thumbnail_url
-    @response["entry"]["media:group"]["media:thumbnail"][0]["url"]
+    #@response["entry"]["media:group"]["media:thumbnail"][0]["url"]
+    "http://img.youtube.com/vi/#{@clip_id}/0.jpg"
   end
   
   def embed_html(width = 425)
@@ -28,7 +29,8 @@ class YouTube
         <param name="movie" value="#{@embed_url}" />
         <param name="allowFullScreen" value="true" />
         <param name="wmode" value="transparent" />
-        <embed src="#{@embed_url}" type="application/x-shockwave-flash" allowfullscreen="true" width="#{width}" height="#{height}" />
+        <param name="bgcolor" value="#FFFFFF" />
+        <embed src="#{@embed_url}" type="application/x-shockwave-flash" bgcolor="#FFFFFF" allowfullscreen="true" wmode="transparent" width="#{width}" height="#{height}" />
       </object>
     END
   end
