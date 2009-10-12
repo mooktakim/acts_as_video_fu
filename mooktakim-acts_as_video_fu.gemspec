@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name     = "acts_as_video_fu"
+  s.name     = "mooktakim-acts_as_video_fu"
   s.version  = "1.3.12"
   s.date     = "2009-10-04"
   s.summary  = "Rails plugin that easily allows you to show video streams on your site."
